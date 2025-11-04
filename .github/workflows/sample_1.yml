@@ -1,0 +1,17 @@
+name: test the flow
+# trigger
+on: push
+jobs: 
+    firstJob:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: welcome message
+              run: echo "Welcome ubuntu"
+
+            - name: List files
+              run: ls
+
+             - name: Read file
+               run: cat README.md
+                
+
