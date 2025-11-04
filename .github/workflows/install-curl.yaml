@@ -1,0 +1,13 @@
+name: install curl in ubuntu
+on: push
+
+jobs:
+    curlinstalljob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: install curl
+              run: sudo apt-get install curl
+
+            - name: veriy curl installation
+              run: curl --version
+        
