@@ -5,8 +5,15 @@ jobs:
     firstJob:
         runs-on: ubuntu-latest
         steps: 
+        
+            - name: checkout action
+              uses: actions/checkout@v4
+              
             - name: welcome message
               run: echo "Welcome ubuntu"
+
+      
+              
 
             - name: List files
               run: ls
