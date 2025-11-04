@@ -1,0 +1,20 @@
+name: Install and test java
+on: push
+
+jobs:
+    installJob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout project
+              uses: actions/checkout@v5
+        
+            - name: setup Java JDK
+              uses: actions/setup-java@v4
+              with:
+                java-version: '17'
+                distribution: 'temurin'
+            - name: verify java version
+              run: java -version
+              
+            - name: Run the Maven verify phase
+              run: mvn --batch-mode --update-snapshots verify
