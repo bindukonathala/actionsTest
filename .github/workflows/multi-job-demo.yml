@@ -38,6 +38,6 @@ jobs:
   
   steps:
    - name: Deploy step
-     run: curl --version >> version.txt
+     run: curl -i http://www.bbc.co.uk >> version.txt
 
      
