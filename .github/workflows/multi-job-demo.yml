@@ -7,11 +7,12 @@ jobs:
  build-job:
   runs-on: ubuntu-latest
   steps:
-    - name: checkout codebase
-      uses: actions/checkout@v5
     
     - name: list all files
       run: ls -lart
+    
+    - name: install curl
+      run: sudo apt-get install curl
 
     - name: Sleep for 30 seconds
       run: sleep 30
@@ -25,8 +26,8 @@ jobs:
    - name: List files for debugging
      run: ls -lart
 
-   - name: Display README content
-     run: cat README.md
+   - name: check curl version
+     run: curl --version
   
    - name: Sleep for 10 seconds
      run: sleep 10
