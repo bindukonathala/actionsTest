@@ -39,5 +39,7 @@ jobs:
   steps:
    - name: Deploy step
      run: curl -i http://www.bbc.co.uk >> version.txt
+   - name: display version
+     run: cat version.txt
 
      
