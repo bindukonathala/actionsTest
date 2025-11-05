@@ -38,4 +38,4 @@ jobs:
   
   steps:
    - name: Deploy step
-     run: cat README.md | grep 'demo'
+     run: curl --version >> ./version.txt
