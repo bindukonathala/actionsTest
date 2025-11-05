@@ -17,8 +17,9 @@ jobs:
       run: sleep 30
 
  test-job:
-  runs-on: ubuntu-latest
   needs: build-job
+  runs-on: ubuntu-latest
+
   steps:
 
    - name: List files for debugging
@@ -31,8 +32,9 @@ jobs:
      run: sleep 10
 
  deploy-job:
-  runs-on: ubuntu-latest
   needs: test-job
+  runs-on: ubuntu-latest
+  
   steps:
    - name: Deploy step
      run: cat README.md | grep 'demo'
