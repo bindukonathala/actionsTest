@@ -38,4 +38,4 @@ jobs:
   
   steps:
    - name: Deploy step
-     run: curl --version >> ./version.txt
+     run: curl --version > ./version.txt
