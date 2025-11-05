@@ -1,4 +1,4 @@
-name: Multi-line workflow
+name: Multi-job workflow
 
 on: push
 
@@ -20,6 +20,10 @@ jobs:
   runs-on: ubuntu-latest
   needs: build-job
   steps:
+
+   - name: List files for debugging
+     run: ls -lart
+
    - name: Display README content
      run: cat README.md
   
