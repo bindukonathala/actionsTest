@@ -8,8 +8,6 @@ jobs:
             - name: install curl
               run: sudo apt-get install curl
 
-              .github/workflows/shell-demo.sh
-
             - name: veriy curl installation
               run: curl --version
         

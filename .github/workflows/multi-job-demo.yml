@@ -1,0 +1,32 @@
+name: Multi-line workflow
+
+on: push
+
+jobs:
+
+ build-job:
+  runs-on: ubuntu-latest
+  steps:
+    - name: checkout codebase
+      uses: actions/checkout@v5
+    
+    - name: list all files
+      run: ls -lart
+
+    - name: Sleep for 30 seconds
+      run: sleep 30
+
+ test-job:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Display README content
+     run: cat README.md
+  
+   - name: Sleep for 10 seconds
+     run: sleep 10
+
+ deploy-job:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Deploy step
+     run: ls -lart
