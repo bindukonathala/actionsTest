@@ -7,9 +7,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: checkout code
-              run: actions/checkout@v5
+              uses: actions/checkout@v5
             
             - name: Execute shell script
               run: ./shell-demo.sh
-               
+
             
